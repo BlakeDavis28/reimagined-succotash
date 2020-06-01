@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="twoplayer.css">
+  <script src="js/twoplayer.js" defer></script>
+  <title>Document</title>
+</head>
+
+<header>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <nav class="navbar">
+    <ul>
+      <li><a href="History"> History</a></li>
+      <li><a href="Origin"> Origin</a></li>
+      <li><a href="Other"> Other </a></li>
+    </ul>
+  </nav>
+<label for="nav-toggle" class="nav-toggle-label">
+<span>X</span>
+</label>
+ </header>
+<body>
+
+  <div class="board" id="board">
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+    <div class="cell" data-cell></div>
+  </div>
+  <div class="winning-message" id="winningMessage">
+    <div data-winning-message-text></div>
+    <button id="restartButton">Restart</button>
+  </div>
+
+  <footer>
+
+  <p> Tic Tac Toe - Fear No Foe &copy; </p>
+
+  </footer>
+
+</body>
+
+
+
+</html>
