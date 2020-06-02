@@ -1,38 +1,49 @@
+/* global styles */
 *, *::after, *::before {
-  box-sizing: border-box;
+  box-sizing: border-box; /* for styling widths and heights */
 }
 
 :root {
   --cell-size: 100px;
-  --mark-size: calc(var(--cell-size) * .9);
+  --mark-size: calc(var(--cell-size) * .9); /* mark size 90% of cell size */
 }
 
+:root-colours { /* CSS variables to use in place of colours */
+    --main-background-color: #EAE7DC;
+    --main-character-color: #E85A4F;
+    --main-character-shadow: #E98074;
+    --main-black-color: #8E8D8A;
+    --sand-color: #D8C3A5;
+}
 body {
-  margin: 0;
+  margin: 0; /* removes margins */
+  background-color: #EAE7DC;
 }
 
+/* I used VH and VW to control the widths and heights regardless of viewport size */
 .board {
   width: 100vw;
   height: 100vh;
   display: grid;
   justify-content: center;
   align-content: center;
-  justify-items: center;
-  align-items: center;
-  grid-template-columns: repeat(3, auto)
+  justify-items: center; /* alignment for Xs and Os inside the cells */
+  align-items: center; /* alignment for Xs and Os inside the cells */
+  grid-template-columns: repeat(3, auto) /* to give 3 auto sized columns for grid */
 }
 
 .cell {
-  width: var(--cell-size);
-  height: var(--cell-size);
-  border: 1px solid black;
+  width: var(--cell-size); /* CSS variable for efficiency */
+  height: var(--cell-size); /* CSS variable for efficiency */
+  border: 1px solid #8E8D8A;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  cursor: pointer;
+  cursor: pointer; /* defines cursor */
 }
 
+/*this section removes the top/bottom and side lines from the Tic Tac Toe Grid */
 .cell:first-child,
 .cell:nth-child(2),
 .cell:nth-child(3) {
@@ -53,6 +64,7 @@ body {
   border-bottom: none;
 }
 
+/*this section stops the cursor from hovering on already taken places */
 .cell.x,
 .cell.circle {
   cursor: not-allowed;
@@ -61,23 +73,25 @@ body {
 .cell.x::before,
 .cell.x::after,
 .cell.circle::before {
-  background-color: black;
+  background-color: #E85A4F;
 }
 
+/* hover colour and before / after  */
 .board.x .cell:not(.x):not(.circle):hover::before,
 .board.x .cell:not(.x):not(.circle):hover::after,
 .board.circle .cell:not(.x):not(.circle):hover::before {
-  background-color: lightgrey;
+  background-color: #E98074;
 }
 
+/* create the X icon with CSS, and block it from covering an O space on board */
 .cell.x::before,
 .cell.x::after,
 .board.x .cell:not(.x):not(.circle):hover::before,
 .board.x .cell:not(.x):not(.circle):hover::after {
   content: '';
   position: absolute;
-  width: calc(var(--mark-size) * .15);
-  height: var(--mark-size);
+  width: calc(var(--mark-size) * .15); /* CSS variable for efficiency */
+  height: var(--mark-size); /* CSS variable for efficiency */
 }
 
 .cell.x::before,
@@ -90,6 +104,7 @@ body {
   transform: rotate(-45deg);
 }
 
+/* create the O icon with CSS, and block it from covering an X space on board*/
 .cell.circle::before,
 .cell.circle::after,
 .board.circle .cell:not(.x):not(.circle):hover::before,
@@ -101,25 +116,27 @@ body {
 
 .cell.circle::before,
 .board.circle .cell:not(.x):not(.circle):hover::before {
-  width: var(--mark-size);
-  height: var(--mark-size);
+  width: var(--mark-size); /* CSS variable for efficiency */
+  height: var(--mark-size); /* CSS variable for efficiency */
 }
 
 .cell.circle::after,
 .board.circle .cell:not(.x):not(.circle):hover::after {
-  width: calc(var(--mark-size) * .7);
-  height: calc(var(--mark-size) * .7);
-  background-color: white;
+  width: calc(var(--mark-size) * .7); /* CSS variable for efficiency */
+  height: calc(var(--mark-size) * .7); /* CSS variable for efficiency */
+  background-color: #EAE7DC;
 }
 
+/* Winner Message section for when game closes, always in center of screen */
 .winning-message {
+  font-family: 'Open Sans Condensed', sans-serif;
   display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, .9);
+  background-color: rgba(0, 0, 0, .9); /* black with some opacity */
   justify-content: center;
   align-items: center;
   color: white;
@@ -149,4 +166,51 @@ p {
   font-family: 'Open Sans Condensed', sans-serif;
   text-align: center;
 
+}
+
+h3 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 2rem;
+  margin-bottom: -120px;
+  text-align: center;
+  text-decoration: none;
+  animation-duration: 1.2s;
+}
+
+
+.navbar {
+  margin: 0 auto;
+  width: 1000px;
+  text-align: right;
+  overflow: hidden;
+  margin-right: 20px;
+
+}
+nav {
+  width: 100%
+  height: 100px;
+
+}
+
+nav li {
+  list-style-type: none;
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 30px;
+
+}
+
+nav a {
+
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    line-height: 1.3em;
+    color: #8E8D8A;
+}
+
+nav a.selected, nav a:hover {
+color:#fff;
+color: #32673f;
 }
