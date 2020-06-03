@@ -1,6 +1,6 @@
-const X_CLASS = 'x'
-const CIRCLE_CLASS = 'circle'
-const WINNING_COMBINATIONS = [
+const X_ICON = 'x'
+const CIRCLE_ICON = 'circle'
+const COMBS_TOWIN = [
   [0, 1, 2],
   [3, 4, 5],
   [6, 7, 8],
@@ -26,8 +26,8 @@ restartButton.addEventListener('click', startGame)
 function startGame() {
   circleTurn = false
   cellElements.forEach(cell => {
-    cell.classList.remove(X_CLASS) /* X */
-    cell.classList.remove(CIRCLE_CLASS) /* O */
+    cell.classList.remove(X_ICON) /* X */
+    cell.classList.remove(CIRCLE_ICON) /* O */
     cell.removeEventListener('click', handleClick)
     cell.addEventListener('click', handleClick, { once: true })
   })
@@ -38,7 +38,7 @@ function startGame() {
 /* places mark only once, checks for wins/draw & switches turns */
 function handleClick(e) {
   const cell = e.target
-  const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS /* ternary, if not O its X */
+  const currentClass = circleTurn ? CIRCLE_ICON : X_ICON/* ternary, if not O its X */
   placeMark(cell, currentClass)
   if (checkWin(currentClass)) {
     endGame(false)
@@ -61,7 +61,7 @@ function endGame(draw) {
 /* defines draw  */
 function isDraw() {
   return [...cellElements].every(cell => {
-    return cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS)
+    return cell.classList.contains(X_ICON) || cell.classList.contains(CIRCLE_ICON)
   })
 }
 
@@ -77,18 +77,18 @@ function swapTurns() {
 
 /* hover based on who's turn it currently is with accurate marker */
 function setBoardHoverClass() {
-  board.classList.remove(X_CLASS) /* removes X*/
-  board.classList.remove(CIRCLE_CLASS) /* removes O */
+  board.classList.remove(X_ICON) /* removes X*/
+  board.classList.remove(CIRCLE_ICON) /* removes O */
   if (circleTurn) {
-    board.classList.add(CIRCLE_CLASS)
+    board.classList.add(CIRCLE_ICON)
   } else {
-    board.classList.add(X_CLASS)
+    board.classList.add(X_ICON)
   }
 }
 
 /* checks all combinations for win by looping through all possible wins  */
 function checkWin(currentClass) {
-  return WINNING_COMBINATIONS.some(combination => {
+  return COMBS_TOWIN.some(combination => {
     return combination.every(index => {
       return cellElements[index].classList.contains(currentClass)
     })
