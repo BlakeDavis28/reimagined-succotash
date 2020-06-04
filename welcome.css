@@ -48,10 +48,10 @@ h1 {
 img {
 
     display: block;
-    height: 200px;
+    height: 315px;
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
+    width: 315px;
 }
 
 .disclaimer {
@@ -89,7 +89,7 @@ nav a {
 
     font-family: 'Open Sans Condensed', sans-serif;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     padding: 10px;
     line-height: 1.3em;
     color: #8E8D8A;
@@ -108,7 +108,7 @@ nav a:hover {
     animation: walk 1s steps(12) infinite,
         forward 8s linear;
     float: left;
-    margin-top: -140px;
+    margin-top: -270px;
 
 }
 
@@ -133,22 +133,23 @@ nav a:hover {
 }
 
 @media only screen and (max-width: 415px) {
-  .walking {
-    display: none;
-  }
-  img {
-    display: block;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
-  }
+    .walking {
+        display: none;
+    }
 
-  .navbar {
-    margin: 0 auto;
-    width: 200px;
-    text-align: center;
-    overflow: hidden;
-    margin-right: 20px;
-  }
+    img {
+        display: block;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+    }
+
+    .navbar {
+        margin: 0 auto;
+        width: 200px;
+        text-align: center;
+        overflow: hidden;
+        margin-right: 20px;
+    }
 }

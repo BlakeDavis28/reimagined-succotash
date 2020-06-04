@@ -225,7 +225,7 @@ nav a {
 
     font-family: 'Open Sans Condensed', sans-serif;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     padding: 10px;
     line-height: 1.3em;
     color: #8E8D8A;
@@ -242,7 +242,7 @@ nav a:hover {
     width: 250px;
     height: 330px;
     animation: walk 1s steps(12) infinite,
-        forward 8s linear ;
+        forward 8s linear;
     margin-top: -325px;
 
 }
@@ -269,54 +269,55 @@ nav a:hover {
 
 
 @media only screen and (max-width: 415px) {
-  .walking {
-    display: none;
-  }
-  img {
-    display: block;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
-  }
+    .walking {
+        display: none;
+    }
 
-  .navbar {
-    margin: 0 auto;
-    width: 200px;
-    text-align: center;
-    overflow: hidden;
-    margin-right: 20px;
-  }
+    img {
+        display: block;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+    }
 
-  .board {
-      width: 100vw;
-      height: 100vh;
-      display: grid;
-      justify-content: center;
-      align-content: center;
-      justify-items: center;
-      /* alignment for Xs and Os inside the cells */
-      align-items: center;
-      /* alignment for Xs and Os inside the cells */
-      grid-template-columns: repeat(3, auto)
-          /* to give 3 auto sized columns for grid */
+    .navbar {
+        margin: 0 auto;
+        width: 200px;
+        text-align: center;
+        overflow: hidden;
+        margin-right: 20px;
+    }
 
-  }
+    .board {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        /* alignment for Xs and Os inside the cells */
+        align-items: center;
+        /* alignment for Xs and Os inside the cells */
+        grid-template-columns: repeat(3, auto)
+            /* to give 3 auto sized columns for grid */
 
-  .cell {
-      width: var(--cell-size);
-      /* CSS variable for efficiency */
-      height: var(--cell-size);
-      /* CSS variable for efficiency */
-      border: 1px solid #8E8D8A;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      /* defines cursor */
-  }
+    }
 
-  h1 {
-    display: none;
-  }
+    .cell {
+        width: var(--cell-size);
+        /* CSS variable for efficiency */
+        height: var(--cell-size);
+        /* CSS variable for efficiency */
+        border: 1px solid #8E8D8A;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        /* defines cursor */
+    }
+
+    h1 {
+        display: none;
+    }
 }

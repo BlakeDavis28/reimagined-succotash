@@ -89,7 +89,7 @@ nav a {
 
     font-family: 'Open Sans Condensed', sans-serif;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     padding: 10px;
     line-height: 1.3em;
     color: #8E8D8A;
@@ -107,7 +107,7 @@ nav a:hover {
     height: 330px;
     animation: walk 1s steps(12) infinite,
         forward 8s linear;
-    margin-top: -150px;
+    margin-top: -270px;
 
 }
 
@@ -133,41 +133,42 @@ nav a:hover {
 
 
 @media only screen and (max-width: 415px) {
-  .walking {
-    display: none;
-  }
-  img {
-    display: block;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
-  }
+    .walking {
+        display: none;
+    }
 
-  .navbar {
-    margin: 0 auto;
-    width: 200px;
-    text-align: center;
-    overflow: hidden;
-    margin-right: 20px;
-  }
+    img {
+        display: block;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+    }
 
-  h1 {
-      font-family: 'Open Sans Condensed', sans-serif;
-      text-shadow: 1px 1px 1px #666,
-          3px 3px 8px black;
-      font-size: 1.5rem;
-      margin-bottom: -100px;
-      text-align: center;
-      text-decoration: none;
-      animation-duration: 1.2s;
-  }
+    .navbar {
+        margin: 0 auto;
+        width: 200px;
+        text-align: center;
+        overflow: hidden;
+        margin-right: 20px;
+    }
 
-  .video {
-    display: block;
-    height: 158px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 280px;
-  }
+    h1 {
+        font-family: 'Open Sans Condensed', sans-serif;
+        text-shadow: 1px 1px 1px #666,
+            3px 3px 8px black;
+        font-size: 1.5rem;
+        margin-bottom: -100px;
+        text-align: center;
+        text-decoration: none;
+        animation-duration: 1.2s;
+    }
+
+    .video {
+        display: block;
+        height: 158px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 280px;
+    }
 }
