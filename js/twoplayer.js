@@ -38,7 +38,7 @@ function startGame() {
 /* places mark only once, checks for wins/draw & switches turns */
 function handleClick(e) {
   const cell = e.target
-  const currentClass = circleTurn ? CIRCLE_ICON : X_ICON/* ternary, if not O its X */
+  const currentClass = circleTurn ? CIRCLE_ICON : X_ICON /* ternary, if not O its X */
   placeMark(cell, currentClass)
   if (checkWin(currentClass)) {
     endGame(false)
