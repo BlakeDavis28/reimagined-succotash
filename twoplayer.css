@@ -54,6 +54,7 @@ body {
     align-items: center;
     position: relative;
     cursor: pointer;
+    color: #8E8D8A;
     /* defines cursor */
 }
 
