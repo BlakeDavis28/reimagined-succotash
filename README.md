@@ -1,5 +1,5 @@
 # reimagined-succotash- Blake's Tic Tac Toe
-I really enjoyed this project, it was challenging yet rewarding and enabled me to complete my first complete (somewhat) project. 
+I really enjoyed this project, it was challenging yet rewarding and enabled me to complete my first complete (somewhat) project. You can find it here - https://blakedavis28.github.io/reimagined-succotash/index.html
 ## Tech Used 
 - HTML 
 - CSS
